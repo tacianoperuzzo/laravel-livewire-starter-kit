@@ -32,13 +32,23 @@ Clone from Github
 ```
 git clone https://github.com/tacianoperuzzo/laravel-livewire-starter-kit app
 ```
-And run: 
+Install dependencies
 ```
 cd app
 npm install
 composer install
-composer run dev
 ```
+Configure the enviroment
+```
+cp .env.example .env
+```
+Run migrations, generate key and run the project
+```
+php artisan migrate
+php artisan key:generate
+cpmposer run dev
+```
+
 ## License
 
 This starter kit is open-sourced software licensed under the MIT license.
