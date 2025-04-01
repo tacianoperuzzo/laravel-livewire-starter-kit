@@ -1,0 +1,66 @@
+// Import Bootstrap
+@import 'settings/bootstrap-variables';
+@import "bootstrap/scss/bootstrap";
+
+// Import Bootstrap Icons
+@import "bootstrap-icons/font/bootstrap-icons.css";
+// Import Fontawesome Icons
+@import "~fontawesome-icons/css/fontawesome.css";
+@import "~fontawesome-icons/css/brands.css";
+@import "~fontawesome-icons/css/solid.css";
+@import "~fontawesome-icons/css/regular.css";
+
+// Sidebar styles
+.sidebar {
+    background-color: #F3F4F5;
+
+    .nav-link {
+        color: #707070;
+        padding: 0.325rem 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.2s;
+
+        &:hover {
+            color: #383838;
+            background-color: #E3E4E5;
+        }
+
+        &.active {
+            color: #222222;
+            background-color: #FFFFFF;
+            border: 1px solid #E3E4E5;
+            font-weight: 500;
+        }
+
+        i {
+            width: 1.25rem;
+            font-size: 1rem;
+            margin-right: 0.5rem;
+            transition: rotate 0.2s;
+        }
+
+        &[aria-expanded="true"] {
+
+            span {
+                color: #383838;
+            }
+
+            i:last-child {
+                // transition: transform 0.1s;
+                rotate: 90deg;
+            }
+        }
+    }
+
+    ul.sub-nav .nav-link {
+        i {
+            margin-left: 1rem;
+        }
+    }
+}
+
+.ps-lg-280px {
+    @include media-breakpoint-up(lg) {
+        padding-left: 280px;
+    }
+}
